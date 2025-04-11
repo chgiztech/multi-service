@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+    user-service:
+        build: ./user-service
+        container_name: user-service
+        env_file:
+            - ./user-service/src/config/config.env
+        volumes:
+            - ./user-service:/app
+        ports:
+            - '5001:5001'
+
+        command: npm run dev
+
+    records-service:
+        build: ./records-service
+        container_name: records-service
+        env_file:
+            - ./records-service/src/config/config.env
+        volumes:
+            - ./records-service:/app
+        ports:
+            - '5002:5002'
+
+        command: npm run dev
+
+    email-service:
+        build: ./email-service
+        container_name: email-service
+        env_file:
+            - ./email-service/src/config/config.env
+        volumes:
+            - ./email-service/app
+        ports:
+            - '5003:5003'
+
+        command: npm run dev

@@ -1,0 +1,28 @@
+{
+  "name": "records-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./src/server.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
