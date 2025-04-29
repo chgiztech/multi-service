@@ -1,45 +1,39 @@
 # 🗂️ Multi-Service API for User, Record, Email & Authentication
 
-Этот проект включает несколько сервисов, обеспечивающих управление пользователями, заметками, отправку email-сообщений через RabbitMQ и аутентификацию.
+This project includes multiple services that provide user management, note (record) handling, email sending via RabbitMQ, and authentication functionality.
 
 ---
 
-## 🚀 Возможности
+## 🚀 Features
 
-1. **Email Service**
-   Отправка приветственных email-сообщений пользователям через RabbitMQ и Nodemailer.
-   Приветственные письма отправляются пользователю, когда он регистрируется в системе.
+- **Email Service**
+  Sends welcome emails to users via RabbitMQ and Nodemailer. A welcome email is triggered when a user successfully registers.
 
-2. **Record Service**
-   Управление заметками (создание, получение, обновление, удаление).
-   Поддерживает операции CRUD для хранения данных в базе данных.
+- **Record Service**
+  Full CRUD operations for managing personal notes (records). Supports creating, reading, updating, and deleting records in the database.
 
-3. **User Service**
-   Управление пользователями (создание, получение, обновление, удаление).
-   Позволяет работать с базой данных пользователей и их учетными записями.
+- **User Service**
+  Handles user account operations including create, read, update, and delete. Manages the user database and profile information.
 
-4. **Auth Service**
-   Регистрация, аутентификация пользователей с использованием JWT (JSON Web Token).
-   Позволяет создавать и проверять токены, а также отправлять приветственные сообщения при регистрации.
+- **Auth Service**
+  Handles user registration and authentication using **JWT (JSON Web Tokens)**. Supports token creation, validation, and dispatching welcome messages on registration.
 
 ---
 
-## 🧩 Технологии
+## 🧩 Technologies Used
 
-- **Node.js**: Вся логика сервиса реализована на Node.js.
-- **Sequelize**: Для работы с базой данных PostgreSQL.
-- **RabbitMQ**: Используется для асинхронного обмена сообщениями между сервисами.
-- **Nodemailer**: Для отправки email-сообщений.
-- **JWT (JSON Web Tokens)**: Для аутентификации пользователей.
-- **PostgreSQL**: Реляционная база данных для хранения пользователей и заметок.
+- **Node.js** – Core service logic is implemented using Node.js
+- **Sequelize** – ORM used for PostgreSQL database interactions
+- **RabbitMQ** – Enables asynchronous messaging between microservices
+- **Nodemailer** – Sends transactional/welcome emails
+- **JWT (JSON Web Tokens)** – Used for secure authentication and session management
+- **PostgreSQL** – Relational database for storing users and records
 
 ---
 
-### Запуск серверов
+## 🚀 Running the Servers
 
-Запустить сервер в режиме разработки:
-
-- **Для разработки**:
+To start the servers in development mode:
 
 ```bash
 npm run dev
